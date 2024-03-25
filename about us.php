@@ -3,43 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Titel van de pagina</title>
+    <title>About Us</title>
     <style>
-        /* Stijl voor de header */
         header {
-            background-color: #D7D7D7; /* Header kleur */
-            color: #fff;
-            padding: 50px 50px;
+            background-color: #D7D7D7;
+            color: #000;
+            padding: 20px 50px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 999; /* Zorgt ervoor dat de header bovenaan blijft */
         }
 
-        /* Stijl voor de body */
         body {
-            background-color: #B2B0B0; /* Body kleur */
+            background-color: #B2B0B0;
             margin: 0;
-            padding: 0;
+            padding-top: 80px; /* Voeg padding-top toe om ruimte te maken voor de header */
+            text-align: center; /* Om de tekst van "About Us:" te centreren */
         }
 
-        /* Stijl voor de footer */
         footer {
-            background-color: #000; /* Footer kleur */
-            color: #fff;
+            background-color: #000; 
+            color: #fff; 
             text-align: center;
-            padding: 50px 50px;
+            padding: 50px;
             position: fixed;
             bottom: 0;
             width: 100%;
         }
 
-        /* Stijl voor de logo afbeelding */
         .logo img {
-            height: 50px; /* Pas aan naar wens */
-            width: auto; /* Houdt de verhoudingen van de afbeelding */
+            height: 50px;
+            width: auto; 
         }
 
-        /* Stijl voor de navigatiekopjes */
         nav ul {
             list-style-type: none;
             padding: 0;
@@ -56,8 +56,12 @@
         }
 
         nav ul li a {
-            color: #fff;
+            color: #000;
             text-decoration: none;
+        }
+
+        .about-us {
+            padding: 20px;
         }
     </style>
 </head>
@@ -77,8 +81,12 @@
     </nav>
 </header>
 
+<div class="about-us">
+    <h1>About Us:</h1>
+</div>
+
 <footer>
-    <p>&copy; <?php echo date("Y"); ?> Jouw bedrijfsnaam. Alle rechten voorbehouden.</p>
+    Dit is de footer
 </footer>
 
 </body>
