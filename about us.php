@@ -8,7 +8,7 @@
         header {
             background-color: #D7D7D7;
             color: #000;
-            padding: 20px 50px;
+            padding: 50px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -21,8 +21,13 @@
         body {
             background-color: #B2B0B0;
             margin: 0;
-            padding-top: 80px; /* Voeg padding-top toe om ruimte te maken voor de header */
-            text-align: center; /* Om de tekst van "About Us:" te centreren */
+            padding-top: 150px; /* Voeg padding-top toe om ruimte te maken voor de header */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Om de body te centreren */
+            flex-direction: column; /* Om elementen in kolom te plaatsen */
+            overflow: hidden; /* Blokkeert scrollen op de pagina */
         }
 
         footer {
@@ -60,9 +65,7 @@
             text-decoration: none;
         }
 
-        .about-us {
-            padding: 20px;
-        }
+        
     </style>
 </head>
 <body>
