@@ -1,3 +1,12 @@
+<?php
+$menuItems = array(
+    "Home" => "index.php",
+    "Our Menu" => "menu.php",
+    "About Us" => "about.php",
+    "Gallery" => "gallery.php"
+);
+?>
+
 <!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -5,54 +14,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
     <style>
-        header {
-            background-color: #D7D7D7;
-            color: #000;
-            padding: 50px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 999; /* Zorgt ervoor dat de header bovenaan blijft */
-        }
-
         body {
             background-color: #B2B0B0;
             margin: 0;
-            padding-top: 150px; /* Voeg padding-top toe om ruimte te maken voor de header */
+            padding-top: 70px; /* Ruimte maken voor de header */
             display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh; /* Om de body te centreren */
-            flex-direction: column; /* Om elementen in kolom te plaatsen */
-            overflow: hidden; /* Blokkeert scrollen op de pagina */
+            flex-direction: column;
+            min-height: 100vh; /* Minimale hoogte van de viewport */
+            overflow: hidden; /* Voorkom scrollen in de pagina */
+        }
+
+        header {
+            background-color: #D7D7D7;
+            color: #000;
+            padding: 20px;
+            width: 100%;
+            height: 70px; /* Hoogte van de header vergroten */
+            display: flex;
+            justify-content: space-between; /* Verplaats de elementen naar de uiteinden van de header */
+            align-items: center; /* Centreer verticaal */
+            position: fixed;
+            top: 0;
+            left: 0;
         }
 
         footer {
-            background-color: #000; 
-            color: #fff; 
-            text-align: center;
-            padding: 50px;
+            background-color: #000;
+            color: #fff;
+            padding: 20px; /* Padding voor inhoud */
+            width: 100%;
+            height: 25px; /* Hoogte van de footer */
+            margin-top: auto; /* Plaats de footer onderaan */
             position: fixed;
             bottom: 0;
-            width: 100%;
+            left: 0;
         }
 
         .logo img {
             height: 50px;
-            width: auto; 
+            width: auto;
+        }
+
+        nav {
+            margin-left: auto; /* Plaats de navigatie naar rechts */
+            margin-right: 20px; /* Voeg een rechtermarge toe aan de navigatie */
         }
 
         nav ul {
             list-style-type: none;
             padding: 0;
             margin: 0;
+            display: flex;
+            height: 100%; /* Zorg ervoor dat de navigatie de volledige hoogte van de header heeft */
+            align-items: center; /* Centreer verticaal */
         }
 
         nav ul li {
-            display: inline;
             margin-left: 20px;
         }
 
@@ -65,7 +82,11 @@
             text-decoration: none;
         }
 
-        
+        .content {
+            text-align: center;
+            margin-top: 100px; /* Ruimte maken onder de header */
+            padding: 0 20px; /* Voeg horizontale padding toe */
+        }
     </style>
 </head>
 <body>
@@ -76,16 +97,23 @@
     </div>
     <nav>
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Our Menu</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Gallery</a></li>
+            <?php
+                foreach ($menuItems as $item => $url) {
+                    echo "<li><a href='$url'>$item</a></li>";
+                }
+            ?>
         </ul>
     </nav>
 </header>
 
-<div class="about-us">
-    <h1>About Us:</h1>
+<div class="content">
+    <h1>Over Ons</h1>
+    <p>
+        <?php echo "Welkom bij [Naam van het restaurant], waar passie voor lekker eten en gastvrijheid samenkomen. Ons verhaal begon [jaar van oprichting] toen [eigenaar(s)naam] zijn/haar/hun liefde voor koken en gastvrijheid omzette in een culinaire bestemming. Sindsdien hebben we ons gericht op het creëren van een unieke culinaire ervaring voor elke gast die onze deuren binnenstapt."; ?>
+    </p>
+    <p>
+        <?php echo "Bij [Naam van het restaurant] draait alles om hoogwaardige ingrediënten, creatieve gerechten en een warme sfeer. Ons getalenteerde team van chefs combineert klassieke technieken met moderne smaken om gerechten te creëren die de zintuigen prikkelen en het hart verwarmen. We streven ernaar om onze gasten te verrassen en te inspireren met elke hap die ze nemen."; ?>
+    </p>
 </div>
 
 <footer>
