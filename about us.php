@@ -15,77 +15,127 @@ $menuItems = array(
     <title>About Us</title>
     <style>
         body {
-            background-color: #B2B0B0;
             margin: 0;
-            padding-top: 70px; /* Ruimte maken voor de header */
+            padding: 0;
+            font-family: Arial, sans-serif;
             display: flex;
             flex-direction: column;
-            min-height: 100vh; /* Minimale hoogte van de viewport */
-            overflow: hidden; /* Voorkom scrollen in de pagina */
+            min-height: 100vh;
         }
 
         header {
-            background-color: #D7D7D7;
-            color: #000;
-            padding: 20px;
-            width: 100%;
-            height: 70px; /* Hoogte van de header vergroten */
+            background-color: rgb(28, 28, 28);
+            height: 150px;
             display: flex;
-            justify-content: space-between; /* Verplaats de elementen naar de uiteinden van de header */
-            align-items: center; /* Centreer verticaal */
-            position: fixed;
-            top: 0;
-            left: 0;
-        }
-
-        footer {
-            background-color: #000;
-            color: #fff;
-            padding: 20px; /* Padding voor inhoud */
-            width: 100%;
-            height: 25px; /* Hoogte van de footer */
-            margin-top: auto; /* Plaats de footer onderaan */
-            position: fixed;
-            bottom: 0;
-            left: 0;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
         }
 
         .logo img {
-            height: 50px;
+            height: 80px; 
             width: auto;
+            margin-right: 20px;
         }
 
-        nav {
-            margin-left: auto; /* Plaats de navigatie naar rechts */
-            margin-right: 20px; /* Voeg een rechtermarge toe aan de navigatie */
-        }
-
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
+        header > nav > ul {
             display: flex;
-            height: 100%; /* Zorg ervoor dat de navigatie de volledige hoogte van de header heeft */
-            align-items: center; /* Centreer verticaal */
+            list-style: none;
+            margin: 0;
+            padding: 0;
         }
 
-        nav ul li {
+        header > nav > ul > li {
             margin-left: 20px;
         }
 
-        nav ul li:first-child {
+        header > nav > ul > li:first-child {
             margin-left: 0;
         }
 
-        nav ul li a {
-            color: #000;
+        header > nav > ul > li > a {
+            color: #fff;
             text-decoration: none;
+    }
+
+        main {
+            flex: 1;
+            background-color: #f2f2f2;
+            padding: 20px;
+            text-align: center;
         }
 
-        .content {
+        footer {
+            height: 300px;
+            background-image: linear-gradient(white, rgb(130, 245, 35));
             text-align: center;
-            margin-top: 100px; /* Ruimte maken onder de header */
-            padding: 0 20px; /* Voeg horizontale padding toe */
+            color: #333;
+            padding-top: 50px;
+        }
+ 
+            footer p {
+                margin: 0;
+        }
+ 
+            .footer-info {
+            text-align: center;
+        }
+ 
+            .footer-info p {
+             margin: 5px 0;
+             font-size: 16px;
+        }
+ 
+            .social-icons {
+            margin-top: 10px;
+        }
+ 
+            .social-icons a {
+            display: inline-block;
+            margin-right: 10px;
+        }
+ 
+          .social-icons img {
+           width: 30px;
+           height: 30px;
+        }
+
+           *{box-sizing:border-box}
+
+           .about-section {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            margin-top: 50px; 
+        }
+
+            .about-text {
+            max-width: 50%;
+            margin-right: 20px;
+            font-family: "Lora", serif; 
+        }
+  
+            .about-text p {
+            margin-bottom: 10px;
+        }
+
+            .about-image img {
+            width: 400px;
+            height: 250px;
+            margin-right: 10px;
+        }
+
+            .bottom-section {
+            margin-top: 50px;
+        }
+
+            .bottom-section iframe {
+            width: 100%;
+            height: 400px;
+        }
+
+            h1, h2, h3, h4, h5, h6 {
+            font-family: "Roboto", "Lora"; 
         }
     </style>
 </head>
@@ -93,31 +143,81 @@ $menuItems = array(
 
 <header>
     <div class="logo">
-        <img src="jouwlogo.jpg" alt="Logo">
+        <img src="img/jouwlogo.png" alt="Logo">
     </div>
     <nav>
         <ul>
             <?php
-                foreach ($menuItems as $item => $url) {
-                    echo "<li><a href='$url'>$item</a></li>";
-                }
+            foreach ($menuItems as $item => $url) {
+                echo "<li><a href='$url'>$item</a></li>";
+            }
             ?>
         </ul>
     </nav>
 </header>
 
-<div class="content">
-    <h1>Over Ons</h1>
-    <p>
-        <?php echo "Welkom bij [Naam van het restaurant], waar passie voor lekker eten en gastvrijheid samenkomen. Ons verhaal begon [jaar van oprichting] toen [eigenaar(s)naam] zijn/haar/hun liefde voor koken en gastvrijheid omzette in een culinaire bestemming. Sindsdien hebben we ons gericht op het creëren van een unieke culinaire ervaring voor elke gast die onze deuren binnenstapt."; ?>
-    </p>
-    <p>
-        <?php echo "Bij [Naam van het restaurant] draait alles om hoogwaardige ingrediënten, creatieve gerechten en een warme sfeer. Ons getalenteerde team van chefs combineert klassieke technieken met moderne smaken om gerechten te creëren die de zintuigen prikkelen en het hart verwarmen. We streven ernaar om onze gasten te verrassen en te inspireren met elke hap die ze nemen."; ?>
-    </p>
-</div>
+<main>
+    <div style="text-align: center; margin-top: 20px;">
+        <h1>About Us</h1>
+    </div>
+    <div class="about-section">
+        <div class="about-text">
+            <p>Welkom bij ons restaurant! Wij zijn toegewijd aan het leveren van uitmuntendheid in zowel service als gerechten. Onze passie voor kwaliteit zorgt ervoor dat elke maaltijd een culinaire ervaring is.</p>
+            <br>
+            <p>Ons team van ervaren koks streeft naar perfectie in elk gerecht dat we serveren. We geloven in het gebruik van alleen de beste en meest verse ingrediënten om de smaakpapillen van onze gasten te verwennen.</p>
+            <br>
+            <p>Kom bij ons langs en ontdek de unieke smaken die ons restaurant te bieden heeft. We kijken ernaar uit u te verwelkomen!</p>
+        </div>
+        <div class="about-image">
+            <img src="img/about us1.jpg" alt="About Us Image 1">
+            <p style="text-align: center;"></p>
+        </div>
+    </div>
+    <div class="about-section">
+        <div class="about-image">
+            <img src="img/about us2.jpg" alt="About Us Image 2">
+            <p style="text-align: center;"></p>
+        </div>
+        <div class="about-text">
+            <p>We zijn trots op onze inzet voor duurzaamheid en gemeenschapsbetrokkenheid. Door lokale leveranciers te ondersteunen en de impact op het milieu te minimaliseren, streven we naar een positieve verandering in onze samenleving.</p>
+            <br>
+            <p>Onze toewijding aan eerlijke en transparante praktijken maakt ons een vertrouwde keuze voor liefhebbers van lekker eten die belang hechten aan ethische en verantwoorde bedrijfsvoering.</p>
+            <br>
+            <p>Kom meer te weten over onze inspanningen voor duurzaamheid en sluit je aan bij ons in onze missie om een betere wereld te creëren, één maaltijd tegelijk.</p>
+        </div>
+    </div>
+    <div class="bottom-section">
+        <iframe width="660" height="315" src="https://www.youtube.com/embed/NI7hFmtK_x0?si=mbXJ-ytrhNYGdAmY" frameborder="0" allowfullscreen></iframe>
+    </div>
+</main>
 
+<?php
+$restaurant_info = array(
+        "name" => "Yummy Restaurant",
+        "year" => date("Y"),
+        "address" => "123 Main Street, City, Country",
+        "phone" => "+123456789",
+        "email" => "info@yummyrestaurant.com",
+        "social_media" => array(
+        "phone" => "#",
+        "envelope" => "#",
+        "map_pin" => "#"
+    )
+);
+?>
+ 
 <footer>
-    Dit is de footer
+    <div class="footer-info">
+        <p>&copy; <?php echo $restaurant_info['year']; ?> <?php echo $restaurant_info['name']; ?>. All rights reserved.</p>
+        <p><?php echo $restaurant_info['address']; ?></p>
+        <p>Phone: <?php echo $restaurant_info['phone']; ?> | Email: <?php echo $restaurant_info['email']; ?></p>
+        <p>Follow us on social media:</p>
+        <div class="social-icons">
+            <a href="<?php echo $restaurant_info['social_media']['phone']; ?>" class="fa fa-phone"></a>
+            <a href="<?php echo $restaurant_info['social_media']['envelope']; ?>" class="fa fa-envelope"></a>
+            <a href="<?php echo $restaurant_info['social_media']['map_pin']; ?>" class="fa fa-map-pin"></a>
+        </div>
+    </div>
 </footer>
 
 </body>
