@@ -10,124 +10,14 @@ $menuItems = array(
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Muhammed">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Roboto', sans-serif;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
-        header {
-            background-color: rgb(28, 28, 28);
-            height: 150px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 20px;
-        }
-
-        .logo img {
-            height: 80px; 
-            width: auto;
-            margin-right: 20px;
-        }
-
-        header > nav > ul {
-            display: flex;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        header > nav > ul > li {
-            margin-left: 20px;
-        }
-
-        header > nav > ul > li:first-child {
-            margin-left: 0;
-        }
-
-        header > nav > ul > li > a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        main {
-            flex: 1;
-            background-color: #f2f2f2;
-            padding: 20px;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        main h1 {
-            margin-top: 0;
-        }
-
-        .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .photo {
-            width: 30%;
-            margin: 10px;
-        }
-
-        .photo img {
-            width: 100%;
-            height: auto;
-        }
-
-        footer {
-            height: 300px;
-            background-image: linear-gradient(white, rgb(130, 245, 35));
-            text-align: center;
-            color: #333;
-            padding-top: 50px;
-        }
- 
-        footer p {
-            margin: 0;
-        }
- 
-        .footer-info {
-            text-align: center;
-        }
- 
-        .footer-info p {
-            margin: 5px 0;
-            font-size: 16px;
-        }
- 
-        .social-icons {
-            margin-top: 10px;
-        }
- 
-        .social-icons a {
-            display: inline-block;
-            margin-right: 10px;
-        }
- 
-        .social-icons img {
-            width: 30px;
-            height: 30px;
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-    </style>
+    
 </head>
 <body>
 
