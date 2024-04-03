@@ -10,134 +10,16 @@ $menuItems = array(
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Muhammed">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
     <title>About Us</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
 
-        header {
-            background-color: rgb(28, 28, 28);
-            height: 150px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 20px;
-        }
-
-        .logo img {
-            height: 80px; 
-            width: auto;
-            margin-right: 20px;
-        }
-
-        header > nav > ul {
-            display: flex;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        header > nav > ul > li {
-            margin-left: 20px;
-        }
-
-        header > nav > ul > li:first-child {
-            margin-left: 0;
-        }
-
-        header > nav > ul > li > a {
-            color: #fff;
-            text-decoration: none;
-    }
-
-        main {
-            flex: 1;
-            background-color: #f2f2f2;
-            padding: 20px;
-            text-align: center;
-        }
-
-        footer {
-            height: 300px;
-            background-image: linear-gradient(white, rgb(130, 245, 35));
-            text-align: center;
-            color: #333;
-            padding-top: 50px;
-        }
- 
-            footer p {
-                margin: 0;
-        }
- 
-            .footer-info {
-            text-align: center;
-        }
- 
-            .footer-info p {
-             margin: 5px 0;
-             font-size: 16px;
-        }
- 
-            .social-icons {
-            margin-top: 10px;
-        }
- 
-            .social-icons a {
-            display: inline-block;
-            margin-right: 10px;
-        }
- 
-          .social-icons img {
-           width: 30px;
-           height: 30px;
-        }
-
-           *{box-sizing:border-box}
-
-           .about-section {
-            display: flex;
-            align-items: flex-start;
-            justify-content: center;
-            margin-top: 50px; 
-        }
-
-            .about-text {
-            max-width: 50%;
-            margin-right: 20px;
-            font-family: "Lora", serif; 
-        }
-  
-            .about-text p {
-            margin-bottom: 10px;
-        }
-
-            .about-image img {
-            width: 400px;
-            height: 250px;
-            margin-right: 10px;
-        }
-
-            .bottom-section {
-            margin-top: 50px;
-        }
-
-            .bottom-section iframe {
-            width: 100%;
-            height: 400px;
-        }
-
-            h1, h2, h3, h4, h5, h6 {
-            font-family: "Roboto", "Lora"; 
-        }
-    </style>
 </head>
 <body>
 
