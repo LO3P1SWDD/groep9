@@ -1,19 +1,10 @@
-<?php
-$menuItems = array(
-    "Home" => "index.php",
-    "Our Menu" => "menu.php",
-    "About Us" => "about.php",
-    "Gallery" => "gallery.php"
-);
-?>
-
 <!DOCTYPE html>
 <html lang="nl">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <meta name="author" content="Muhammed">
+    <meta name="author" content="">
     <meta name="keywords" content="">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
