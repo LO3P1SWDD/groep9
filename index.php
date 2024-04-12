@@ -23,8 +23,8 @@
                 $nav = array(
                     "Home" => "index.php",
                     "Our Menu" => "Our menu.php",
-                    "About Us" => "#",
-                    "Gallery" => "#",
+                    "About Us" => "about us.php",
+                    "Gallery" => "gallery.php",
                     
 
                     
