@@ -107,7 +107,7 @@ height: 30px;
 
 .container-wrapper {
 display: flex;
-flex-wrap: wrap; /* Allow containers to wrap to the next row */
+flex-wrap: wrap; 
 justify-content: space-between;
 max-width: 1200px;
 margin: 0 auto;
@@ -120,19 +120,19 @@ text-align: center;
 padding: 20px;
 border: 1px solid #ccc;
 border-radius: 50px;
-flex-basis: calc(33.33% - 20px); /* Set width to one-third minus margin */
+flex-basis: calc(33.33% - 20px); 
 margin-bottom: 20px;
 background: linear-gradient(white, rgb(150, 75, 0));
 font-family: 'Roboto';
-box-sizing: border-box; /* Include padding and border in the element's total width and height */
+box-sizing: border-box; 
 }
 
 .container:nth-child(3n+1) {
-margin-left: 0; /* Remove margin left for the first container in each row */
+margin-left: 0; 
 }
 
 .container:last-child {
-margin-right: 0; /* Remove margin right for the last container */
+margin-right: 0; 
 }
 
 

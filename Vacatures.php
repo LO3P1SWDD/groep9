@@ -89,7 +89,7 @@
                 <button class="apply-button">Solliciteren</button>
             </div>
  
-            <!-- Extra vacatures -->
+           
             <div class="vacature">
                 <h2>Kok</h2>
                 <p>We hebben een ervaren kok nodig om ons team te versterken. Je zult verantwoordelijk zijn voor het bereiden van diverse gerechten volgens recept en het handhaven van de hygiëne in de keuken.</p>

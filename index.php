@@ -17,27 +17,40 @@
         </style>
     </head>
     <body>
-        <header>
-            <img src ="img/Logo3.png" alt = Logo>
-            <nav>
-                <?php
-                $nav = array(
-                    "Home" => "index.php",
-                    "Our Menu" => "Our menu.php",
-                    "About Us" => "about us.php",
-                    "Gallery" => "gallery.php",
-                    
+    <header>
+    <img src="img/Logo3.png" alt="Logo">
+    <nav>
+        <?php
+        $nav = array(
+            "Home" => "index.php",
+            "Our Menu" => "Our menu.php",
+            "About Us" => "about us.php",
+            "Gallery" => "gallery.php",
+            "Other" => array(
+            "Vacature" => "Vacatures.php",
+            "Drinks" => "Drankjes.php",
+            "Arrangement" => "arrangement.php",
+            "Reviews" => "review.php"
+            )
+        );
 
-                    
-                );
-                foreach ($nav as $title => $url) {
-                    echo "<a href='$url'>$title</a>";
-                    
-                
+        foreach ($nav as $title => $url) {
+            if (is_array($url)) {
+                echo "<div class='dropdown'>";
+                echo "<button class='dropbtn'>$title</button>";
+                echo "<div class='dropdown-content'>";
+                foreach ($url as $submenu_title => $submenu_url) {
+                    echo "<a href='$submenu_url'>$submenu_title</a>";
                 }
-                ?>
-            </nav>
-        </header>
+                echo "</div>";
+                echo "</div>";
+            } else {
+                echo "<a href='$url'>$title</a>";
+            }
+        }
+        ?>
+    </nav>
+</header>
 
         <main>
         
