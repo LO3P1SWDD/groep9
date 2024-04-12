@@ -1,18 +1,28 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Muhammed">
-    <meta name="keywords" content="">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    
-    <title>Gallery</title>
-</head>
-<body>
-<header>
+    <title>Yummy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <style>
+       
+        .vacancy-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .vacancy {
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+        }
+    </style>
+    <header>
             <img src ="img/Logo3.png" alt = Logo>
             <nav>
                 <?php
@@ -34,18 +44,33 @@
             </nav>
         </header>
 
-<main  class = "maingallery">
-    <h1>Gallery:</h1>
-    <div class="gallery">
-        <?php
-        for ($i = 1; $i <= 10; $i++) {
-            echo "<div class='photo'><img src='img/Gallery$i.jpg' alt='Gallery$i'></div>";
-        }
-        ?>
-    </div>
-</main>
 
-<?php
+
+
+<div class="vacancy-container">
+        <!-- Vacature 1 -->
+        <div class="vacancy">
+            <h2>Vacature Titel 1</h2>
+            <p>Beschrijving van vacature 1.</p>
+            <p>Locatie: Stad</p>
+            <p>Salaris: €XXXXX per jaar</p>
+            <p>Werktijden: Fulltime/Parttime</p>
+        </div>
+
+        <!-- Vacature 2 -->
+        <div class="vacancy">
+            <h2>Vacature Titel 2</h2>
+            <p>Beschrijving van vacature 2.</p>
+            <p>Locatie: Stad</p>
+            <p>Salaris: €XXXXX per jaar</p>
+            <p>Werktijden: Fulltime/Parttime</p>
+        </div>
+
+        <!-- Voeg meer vacatures toe zoals bovenstaande voorbeeld -->
+    </div>
+
+
+    <?php
 $restaurant_info = array(
     "name" => "Yummy Restaurant",
     "year" => date("Y"),
@@ -59,7 +84,7 @@ $restaurant_info = array(
     )
 );
 ?>
- 
+
 <footer>
     <div class="footer-info">
         <p>&copy; <?php echo $restaurant_info['year']; ?> <?php echo $restaurant_info['name']; ?>. All rights reserved.</p>
@@ -75,4 +100,6 @@ $restaurant_info = array(
 </footer>
 
 </body>
-</html>
+    </html>
+
+    

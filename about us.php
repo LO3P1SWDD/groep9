@@ -22,21 +22,27 @@ $menuItems = array(
 
 </head>
 <body>
-
 <header>
-    <div class="logo">
-        <img src="img/jouwlogo.png" alt="Logo">
-    </div>
-    <nav>
-        <ul>
-            <?php
-            foreach ($menuItems as $item => $url) {
-                echo "<li><a href='$url'>$item</a></li>";
-            }
-            ?>
-        </ul>
-    </nav>
-</header>
+            <img src ="img/Logo3.png" alt = Logo>
+            <nav>
+                <?php
+                $nav = array(
+                    "Home" => "index.php",
+                    "Our Menu" => "Our menu.php",
+                    "About Us" => "about us.php",
+                    "Gallery" => "gallery.php",
+                    
+
+                    
+                );
+                foreach ($nav as $title => $url) {
+                    echo "<a href='$url'>$title</a>";
+                    
+                
+                }
+                ?>
+            </nav>
+        </header>
 
 <main>
     <div style="text-align: center; margin-top: 20px;">
